@@ -41,8 +41,8 @@ def interpolation_search(arr, target):
 
 def calc_average_comparisons(search_function, array):
     total_comparisons = 0
-    for i in range(1, len(array) + 1):
-        comparisons = search_function(array, i)
+    for i in range(1, len(array)):
+        comparisons = search_function(array, array[i])
         total_comparisons += comparisons
     average_comparisons = total_comparisons / len(array)
     return average_comparisons
